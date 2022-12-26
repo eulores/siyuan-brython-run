@@ -7,3 +7,7 @@ Python code is written inside code sections in SiYuan, and executed at the press
 ## Installation
 
 Right now, the widget can be manually installed by copying this directory into the /data/widgets folder of your SiYuan installation.
+
+## Screenshot
+
+![brython-run](preview.png "brython-run")
