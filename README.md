@@ -12,7 +12,13 @@ The widget can be installed from within SiYuan. Go to settings (Alt+P), select `
 
 Inside SiYuan, on a new line, insert the `brython-run` widget. Once you click on the `Initialize` button, there will be a python code section with sample code created just above. Also, the label on the button now changes to `Run Python code`.
 
+## Details
+
 The label of the button and the link to the code section are stored as custom attributes attached to the widget block.
+
+`codeID` and `widgetID` are now available to the executing code.
+* `codeID` is the SiYuan ID pointing to the Python code block.
+* `widgetID` is the SiYuan ID pointing to the block containing this widget instance.
 
 ## Screenshot
 
