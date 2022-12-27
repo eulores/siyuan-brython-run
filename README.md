@@ -6,7 +6,13 @@ Python code is written inside code sections in [SiYuan](https://b3log.org/siyuan
 
 ## Installation
 
-Right now, the widget can be manually installed by copying this directory into the /data/widgets folder of your SiYuan installation.
+The widget can be installed from within SiYuan. Go to settings (Alt+P), select `Bazaar` on the left column, switch to the `Widget` tab and find `brython-run`. 
+
+## Usage
+
+Inside SiYuan, on a new line, insert the `brython-run` widget. Once you click on the `Initialize` button, there will be a python code section with sample code created just above. Also, the label on the button now changes to `Run Python code`.
+
+The label of the button and the link to the code section are stored as custom attributes attached to the widget block.
 
 ## Screenshot
 
