@@ -10,4 +10,4 @@ Right now, the widget can be manually installed by copying this directory into t
 
 ## Screenshot
 
-![brython-run](preview.png "brython-run")
+![brython-run](https://raw.githubusercontent.com/eulores/siyuan-brython-run/main/preview.png)
