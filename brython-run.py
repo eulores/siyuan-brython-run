@@ -4,6 +4,7 @@ import json
 
 
 widgetID = window.frameElement.parentElement.parentElement.dataset.nodeId
+codeID = None
 widgetLabel = 'Run Python code'
 
 
@@ -20,6 +21,7 @@ def fetch(url, method="POST", **kwds):
 
 def loadCode():
     global widgetLabel
+    global codeID
     r = fetch('/api/attr/getBlockAttrs', ID=widgetID)
     if 'custom-label' in r['data']:
         widgetLabel = r['data']['custom-label']
@@ -32,10 +34,11 @@ def loadCode():
 
 
 def clickme(ev):
+    global widgetID, codeID
     code = loadCode()
     if code:
         # exec(code)
-        run_script(code)
+        run_script(f'widgetID="{widgetID}"\ncodeID="{codeID}"\n'+code)
     else:
         r = fetch('/api/block/insertBlock', dataType="markdown", nextID=widgetID, data="""\
 ```python
@@ -44,7 +47,8 @@ def clickme(ev):
 
 from browser import alert
 
-# This gets printed to the console (open Developer's tools). The output can be reset by setting sys.stdout to an object with a method write().
+# This gets printed to the console (open Developer's tools).
+# The output can be reset by setting sys.stdout to an object with a method write().
 print('Hello World!')
 
 # This should pop up on the browser
